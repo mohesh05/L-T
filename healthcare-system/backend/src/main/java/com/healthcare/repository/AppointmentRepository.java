@@ -1,0 +1,2 @@
+package com.healthcare.repository; import com.healthcare.entity.Appointment;import java.time.LocalDateTime;import java.util.*;import org.springframework.data.jpa.repository.JpaRepository;
+public interface AppointmentRepository extends JpaRepository<Appointment,Long>{ boolean existsByDoctorIdAndDate(Long doctorId, LocalDateTime date); List<Appointment> findByUserId(Long userId); List<Appointment> findByDoctorId(Long doctorId);} 
